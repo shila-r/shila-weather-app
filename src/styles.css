@@ -2,5 +2,8 @@
   font-size: 70px;
   font-weight: 500;
 }
-#celsius-link {
+
+.units {
+  position: relative;
+  bottom: 40px;
 }
