@@ -10,6 +10,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/styles.css" />
     <title>Weather</title>
   </head>
@@ -44,29 +46,37 @@
           </div>
         </form>
         <div class="row col text-center">
-          <div class="result col-8">
+          <div class="result col-6 mt-3">
             <h1 id="city">Maku</h1>
             <div class="float-left">
-              <span class="temperature" id="temperature">19</span
+              <span class="temperature" id="temperature"></span
               ><span class="units">
-                <a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="celsius-link" class="active">°C</a> |
                 <a href="#" id="fahrenheit-link">°F</a>
               </span>
             </div>
-            <h6>14°/-4°</h6>
-          </div>
-          <div class="col-3">
-            <br />
-
-            <div class="icon-weather">
-              <h5>⛈ <br />Rainy</h5>
+            <div>
+              <ul>
+                <li>14°/-4°</li>
+                <li>last updated:<span class="col m-2" id="date"></span></li>
+              </ul>
             </div>
           </div>
-
-          <div class="col-8 m-2" id="date">3/27 Friday 12:45 PM</div>
-          <div class="col m-3 mt-0">
-            <div class="row">Humidity: 14%</div>
-            <div class="row">Wind: 8 km/h</div>
+          <div class="col-6">
+            <div class="icon-weather">
+              <img src="" alt="" id="icon" />
+              <ul>
+                <li id="description"></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
+              <!-- <div class="row" id="humidity">Humidity: 14%</div>
+              <div class="row" id="wind">Wind: 8 km/h</div> -->
+            </div>
           </div>
         </div>
       </div>
